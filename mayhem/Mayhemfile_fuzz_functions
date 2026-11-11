@@ -1,0 +1,9 @@
+project: savantenvs/nanobind
+target: fuzz_functions
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_functions/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_functions
+    libfuzzer: true
+    timeout: 10
